@@ -12,9 +12,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install --prefix client && npm build --prefix client",
+    "build": "npm install --prefix client && npm run build --prefix client",
     "deploy": "cp -a frontend/build/. public/",
-    "heroku-postbuild": "npm build && npm deploy"
+    "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
   },
   "keywords": [],
   "author": "",
